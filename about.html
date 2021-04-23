@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--   Custom CSS  -->
+    <link rel="stylesheet" href="css/main.css" class="css">
+    <link rel="stylesheet" href="css/about.css" class="css">
+    
+    <!--    Bootstrap JS   -->
+   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    
+<!--    ICONS  -->
+     
+      <script src="https://kit.fontawesome.com/ad8a3aa714.js" crossorigin="anonymous"></script>
+    <title>About us</title>
+  </head>
+  <body>
+    
+<!--    Nav bar   -->
+
+     <header>
+    <div class="container">
+      <div class="brand">
+        <h2>DREAM <span> JOBS</span></h2>
+      </div>
+
+      <div class="mobile-nav">
+        <a href="#" class="open-menu">MENU</a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="index.html" id="home">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="about.html" id="about">About</a>
+          </li>
+          <li class="menu-item has-sub-menu">
+            <a href="#">Services</a>
+
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Web Development</a>
+              </li>
+              
+              <li class="menu-item has-sub-menu">
+                <a href="#">Design</a>
+                
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Print</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                <a href="#">Animation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="contactus.html" id="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="close-menu">Close Menu</a>
+      </nav>
+    </div>
+  </header>
+  
+  <script src="js/main.js"></script>
+
+
+<!--    Nav bar   -->
+<!--    Body  -->
+    <p></p>
+    <p></p>
+    <script>
+        function scrolldown() {
+  window.scrollBy(0, 500);
+}
+        function scrollup()
+        {
+            window.scrollBy(0,-100);
+        }
+      </script>
+      
+      
+      <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com//soryfkft.json"
+    trigger="click"
+    colors="primary:#121331,secondary:#08a88a"
+    style="width:250px;height:250px"
+    id="speechToText" 
+    onclick="record()">
+</lord-icon>
+     
+        <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com//nxaaasqe.json"
+    trigger="click"
+    colors="primary:#121331,secondary:#08a88a"
+    style="width:250px;height:250px"
+    onclick="func1()">
+</lord-icon>
+      
+      
+      
+      
+     <!-- Input area -->
+<!--     <button onclick="record()" style="position:fixed;" id="speechToText">Hit me!</button>-->
+<!--
+    <label for="Speech Recognition" style="color: red;font-size: 30px;">Click to Speak</label>
+    <input style="font-size: 30px; color: blueviolet;position:sticky" type="text" name="" id="speechToText" placeholder="Speak Something" onclick="record()">
+-->
+
+<!--     Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+            recognition.onresult = function(event) {
+                 console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+//            if(event.results[0][0].transcript=="contact")
+                if(event.results[0][0].transcript.includes("contact"))
+                    {
+                        document.getElementById('contact').click();
+                    }
+                 if(event.results[0][0].transcript.includes("about"))
+                    {
+                        document.getElementById('about').click();
+                    }
+                 if(event.results[0][0].transcript.includes("home"))
+                    {
+                        document.getElementById('home').click();
+                    }
+                if(event.results[0][0].transcript.includes("down"))
+                    {
+                        scrolldown();
+                    }
+                 if(event.results[0][0].transcript.includes("up"))
+                    {
+                        scrollup();
+                    }
+            }
+            recognition.start();
+                
+        }
+    </script>
+<!--    </script>-->
+    
+    
+       
+<div class="container-fluid row">
+  
+    <div class="container-fluid col left">
+        <strong>
+            <h1>
+                <b> Build and Boost <br>your Great  Profile</b>
+            </h1>
+        </strong>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum libero amet asperiores, maiores id fuga magni delectus, voluptatem quod quisquam ab possimus cumque veniam tempora quidem? Quaerat alias, quibusdam totam.</p>
+       
+    </div>  
+    <div class="container-fluid col right">
+        
+   
+    </div>  
+
+    
+</div>
+   
+<!--    Footer Section   -->
+   
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid col-8">
+                <div style="text-align: left; font-size: 1.7vw; " class="container-fluid row ">
+                    <div class="col-3">
+                        <b>Categories</b>
+                        <div class="col">   
+                              <a href="#">Content Writer<br></a>
+                              <a href="#">Backend Developer<br></a>
+                              <a href="#">Creative Director<br></a>
+                              <a href="#">UI/UI Designer<br></a>
+
+                          </div>
+                    </div>
+                    <div class="col-3">
+                        <b>Resources</b>
+                        <div class="col">
+                                <a href="#" id="contact">Contact and Support<br></a>
+                                <a href="#">Application<br></a>
+                                <a href="#">FAQ<br></a>
+                                <a href="#">Careers<br></a>
+                          </div>
+                    </div>
+                    <div class="col-3">
+                        <b>Company</b>
+                        <div class="col">
+                            <a href="about.html" id="about">About us<br></a>
+                            <a href="#">Job Seminar<br></a>
+                            <a href="#">Blog<br></a>
+                            <a href="#">News<br></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                      <b>Legal</b>
+                      <div class="col">
+                            <a href="#">Copyright<br></a>
+                            <a href="#">Privacy Policy<br></a>
+                            <a href="#">Disclaimer<br></a>
+                            <a href="#">Terms<br></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: left;" class="container-fluid col-4">
+                
+                      <b><h1 style="color:#ffda55;margin:5% 0%;">DREAMJOB.</h1></b>
+                      <p style="color: #ffffff; font-size: 1.3vw;">Design & Development loremdolor sit amet,consetetur sadipscing elitr, sed diam nonumy.
+                      </p>
+                      
+                      <div style="color: #fff; font-size: 20px;">
+                        
+                          <i style="margin-right: :20px;" class="fab fa-twitter"></i>
+                          <i style="margin: 0px 20px;" class="fab fa-google-plus-g"></i>
+                          <i class="fab fa-facebook-f"></i>
+                      </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footor-bottom">
+        <p style="color: #ffffff; background-color: #101e2a; padding: 10px; text-align: center; ">Copyright <i class="far fa-copyright"></i> 202q Kumar Vaibhaw and Sunil. All rights reserved. </p>
+        
+    </div>
+</footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+<!--  =============================================-->
+ <script>
+     function func1(){
+     setInterval(function() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+            recognition.onresult = function(event) {
+                 console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+//            if(event.results[0][0].transcript=="contact")
+                if(event.results[0][0].transcript.includes("contact"))
+                    {
+                        document.getElementById('contact').click();
+                    }
+                 if(event.results[0][0].transcript.includes("about"))
+                    {
+                        document.getElementById('about').click();
+                    }
+                 if(event.results[0][0].transcript.includes("home"))
+                    {
+                        document.getElementById('home').click();
+                    }
+                 if(event.results[0][0].transcript.includes("down"))
+                    {
+                        scrolldown();
+                    }
+                 if(event.results[0][0].transcript.includes("up"))
+                    {
+                        scrollup();
+                    }
+            }
+            recognition.start();
+                
+        },5000);
+     }
+//     func1();
+    </script>
+ 
+ 
+ 
+<!-- =====================================================================-->
+  
+  
+  
+</html>

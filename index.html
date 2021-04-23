@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!--   Custom CSS  -->
+    <link rel="stylesheet" href="css/main.css" class="css">
+    <link rel="stylesheet" href="css/home.css" class="css">
+    <link rel="stylesheet" href="css/about.css" class="css">
+    
+    <!--    Bootstrap JS   -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <!--    ICONS  -->
+     
+      <script src="https://kit.fontawesome.com/ad8a3aa714.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+  </head>
+  <body >
+    
+<!--    Nav bar   -->
+
+     <header>
+    <div class="container">
+      <div class="brand">
+        <h2>DREAM <span> JOBS</span></h2>
+      </div>
+
+      <div class="mobile-nav">
+        <a href="#" class="open-menu">MENU</a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="#" id="home">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="about.html" id="about">About</a>
+          </li>
+          <li class="menu-item has-sub-menu">
+            <a href="#">Services</a>
+
+            <ul class="sub-menu">
+              <li class="menu-item">
+                <a href="#">Web Development</a>
+              </li>
+              
+              <li class="menu-item has-sub-menu">
+                <a href="#">Design</a>
+                
+                <ul class="sub-menu">
+                  <li class="menu-item">
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#">Print</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                <a href="#">Animation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="contactus.html" id="contact">Contact</a>
+          </li>
+        </ul>
+        <a href="#" class="close-menu">Close Menu</a>
+      </nav>
+    </div>
+  </header>
+  
+  <script src="js/main.js"></script>
+
+
+<!--    Nav bar   -->
+<!--    Body  -->
+
+  
+  <p></p>
+  <p></p>
+  
+     <script>
+        function scrolldown() {
+  window.scrollBy(0, 400);
+}
+        function scrollup()
+        {
+            window.scrollBy(0,-400);
+        }
+         
+      </script>
+  
+   <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com//soryfkft.json"
+    trigger="click"
+    colors="primary:#121331,secondary:#08a88a"
+    style="width:250px;height:250px"
+    id="speechToText" 
+    onclick="record()">
+</lord-icon>
+     
+        <script src="https://cdn.lordicon.com//libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com//nxaaasqe.json"
+    trigger="click"
+    colors="primary:#121331,secondary:#08a88a"
+    style="width:250px;height:250px"
+    onclick="func1()">
+</lord-icon>
+      
+      
+      
+      
+     <!-- Input area -->
+<!--     <button onclick="record()" style="position:fixed;" id="speechToText">Hit me!</button>-->
+<!--
+    <label for="Speech Recognition" style="color: red;font-size: 30px;">Click to Speak</label>
+    <input style="font-size: 30px; color: blueviolet;position:sticky" type="text" name="" id="speechToText" placeholder="Speak Something" onclick="record()">
+-->
+
+<!--     Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+            recognition.onresult = function(event) {
+                 console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+//            if(event.results[0][0].transcript=="contact")
+                if(event.results[0][0].transcript.includes("contact"))
+                    {
+                        document.getElementById('contact').click();
+                    }
+                 if(event.results[0][0].transcript.includes("about"))
+                    {
+                        document.getElementById('about').click();
+                    }
+                 if(event.results[0][0].transcript.includes("home"))
+                    {
+                        document.getElementById('home').click();
+                    }
+                if(event.results[0][0].transcript.includes("down"))
+                    {
+                        scrolldown();
+                    }
+                 if(event.results[0][0].transcript.includes("up"))
+                    {
+                        scrollup();
+                    }
+            }
+            recognition.start();
+                
+        }
+    </script>
+  
+<div class="container-lg my-3">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/banner.png" alt="First Slide">
+                <div class="carousel-objects">
+                <p class="lead carousel-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <button class="btn-lg carousel-btn">
+                    Get Access 3rd 
+                </button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/pexels-anthony-shkraba-5467573.jpg" alt="Second Slide">
+                <div class="carousel-objects">
+                <p class="lead carousel-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <button class="btn-lg carousel-btn">
+                    Get Access 3rd 
+                </button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/pexels-david-sun-955081.jpg" alt="Third Slide">
+                <div class="carousel-objects">
+                <p class="lead carousel-paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <button class="btn-lg carousel-btn">
+                    Get Access 3rd 
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+  
+  
+  
+  
+<!--   Body   -->
+  
+<!--   Container section  -->
+    <div class="container">
+    <div class="header">
+        <h1 class="text-center"><strong> Browse Jobs By Category </strong></h1>
+    </div>    
+        <div class="card">
+        <div class="row">
+            <div class="col">
+                <div class="card w-33">
+                  <div class="card-body">
+                   <i class="far fa-building icon yellow"></i>
+                    <h5 class="card-title  card-h5">Property Development</h5>
+                    <p class="card-text card-p lead">Design & Development loremdolor sit
+                                amet, consetetur sadipscing elitr, seddiam nonumy.
+                    </p>  
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card w-33">
+                  <div class="card-body">
+                   <i class="fas fa-briefcase icon blue"></i>
+                    <h5 class="card-title  card-h5">Business Development</h5>
+                    <p class="card-text card-p lead">Design & Development loremdolor sit
+                                amet, consetetur sadipscing elitr, seddiam nonumy.
+                    </p>  
+                  </div>
+                </div>
+            </div><div class="col">
+                <div class="card w-33">
+                  <div class="card-body">
+                   <i class="fas fa-user-shield icon red"></i>
+                    <h5 class="card-title card-h5">Admin & Accountant</h5>
+                    <p class="card-text card-p lead">Design & Development loremdolor sit
+                                amet, consetetur sadipscing elitr, seddiam nonumy.
+                    </p>  
+                  </div>
+                </div>
+            </div>
+        </div>
+                   <div class="center">
+               <a href="#" class="button margin">See all categories</a>
+            </div>
+    </div>
+</div>
+      
+<!--   Container section  -->
+    
+     
+       
+<!--    Footer Section   -->
+   
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid col-8">
+                <div style="text-align: left; font-size: 1.7vw; " class="container-fluid row ">
+                    <div class="col-3">
+                        <b>Categories</b>
+                        <div class="col">   
+                              <a href="#">Content Writer<br></a>
+                              <a href="#">Backend Developer<br></a>
+                              <a href="#">Creative Director<br></a>
+                              <a href="#">UI/UI Designer<br></a>
+
+                          </div>
+                    </div>
+                    <div class="col-3">
+                        <b>Resources</b>
+                        <div class="col">
+                                <a href="#">Contect and Support<br></a>
+                                <a href="#">Application<br></a>
+                                <a href="#">FAQ<br></a>
+                                <a href="#">Careers<br></a>
+                          </div>
+                    </div>
+                    <div class="col-3">
+                        <b>Company</b>
+                        <div class="col">
+                            <a href="about.html">About us<br></a>
+                            <a href="#">Job Seminar<br></a>
+                            <a href="#">News<br></a>
+                            <a href="contactus.html">Contact Us<br></a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                      <b>Legal</b>
+                      <div class="col">
+                            <a href="#">Copyright<br></a>
+                            <a href="#">Privacy Policy<br></a>
+                            <a href="#">Disclaimer<br></a>
+                            <a href="#">Terms<br></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: left;" class="container-fluid col-4">
+                
+                      <b><h1 style="color:#ffda55;margin:5% 0%;">DREAMJOB.</h1></b>
+                      <p style="color: #ffffff; font-size: 1.3vw;">Design & Development loremdolor sit amet,consetetur sadipscing elitr, sed diam nonumy.
+                      </p>
+                      
+                      <div style="color: #fff; font-size: 20px;">
+                        
+                          <i style="margin-right: :20px;" class="fab fa-twitter"></i>
+                          <i style="margin: 0px 20px;" class="fab fa-google-plus-g"></i>
+                          <i class="fab fa-facebook-f"></i>
+                      </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footor-bottom">
+        <p style="color: #ffffff; background-color: #101e2a; padding: 10px; text-align: center; ">Copyright <i class="far fa-copyright"></i> 2020 Kumar Vaibhaw and Sunil. All rights reserved. </p>
+        
+    </div>
+</footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+  
+  
+ <script>
+     function func1(){
+     setInterval(function() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+            recognition.onresult = function(event) {
+                 console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+//            if(event.results[0][0].transcript=="contact")
+                if(event.results[0][0].transcript.includes("contact"))
+                    {
+                        document.getElementById('contact').click();
+                    }
+                 if(event.results[0][0].transcript.includes("about"))
+                    {
+                        document.getElementById('about').click();
+                    }
+                 if(event.results[0][0].transcript.includes("home"))
+                    {
+                        document.getElementById('home').click();
+                    }
+                 if(event.results[0][0].transcript.includes("down"))
+                    {
+                        scrolldown();
+                    }
+                 if(event.results[0][0].transcript.includes("up"))
+                    {
+                        scrollup();
+                    }
+            }
+            recognition.start();
+                
+        },5000);
+     }
+//     func1();
+    </script>
+  
+</html>

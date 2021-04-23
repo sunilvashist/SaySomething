@@ -1,0 +1,135 @@
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel-item{
+    text-align: center;
+    height: 40%;
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+    max-height: 1440px;
+}
+.carousel-btn{
+    border-radius: 10px;
+    border: 0px solid white;
+    z-index: 999; /*not working */
+    pointer-events: auto;
+}
+.carousel-btn:hover{
+    background-color: #FAB8C4;
+    box-shadow: 10px 10px 1000px white;
+    color: white;
+    border: 3px solid white;
+}
+.carousel-objects{
+    color: white;
+    margin-top: -10%;
+}
+
+/*==================== Section 2 ========================*/
+.icon{
+    padding: 10px;
+    font-size: 35px;
+    border-radius: 15px;
+    border-top-left-radius: 
+    font
+    
+}
+
+.blue{
+    
+    color: #4998dc;
+    background-color: #e2f4ff;
+}
+
+.red{
+    color:#d86262;
+    background-color: #fedede;
+}
+
+.yellow{
+    color: #ccbb62;
+    background-color: #fff9da;
+}
+
+
+.header {
+  font-size: 60px;
+  padding: 30px;
+  text-align: center;
+  color: whi;
+  
+}
+
+.card-h5{
+    
+    font-size: 30px;
+    padding : 20px 0px 20px 0px;
+  
+}
+
+
+
+.lead{
+    padding-bottom: 15px;
+    font-size: 15px;
+    display: block;
+    font-weight: 200;
+}
+
+.card{
+    border: 0px;
+    box-shadow: 0px;
+}
+
+
+.row{
+    border:0px;
+    margin: 0px 10px;
+}
+.col{
+    
+    margin: 15px;
+    border: 10px so;
+    transition: 0.3s;
+    padding: 16px 36px;
+}
+.col:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container{
+    align-content: center;
+    align-items: center;
+}
+
+.button{
+  
+  margin :5px 0px;
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 52px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   border-radius: 30px;
+}
+
+.button:hover{
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+
+
+.center{
+    padding: 2%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+.margin{
+    margin:  40px 0px;;
+}
